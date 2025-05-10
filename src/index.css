@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Body Style */
+
+  body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background-color: #004643;
+  }
+  /* popup blur effect */
+
+  body.swal2-shown > *:not(.swal2-container) {
+    filter: blur(5px);
+    transition: 0.3s ease-in-out;
+}
+
+/* Ensure consistent scrollbar behavior */
+html {
+  overflow-y: scroll; /* Always show the scrollbar */
+}
+
+body.swal2-shown {
+  overflow-y: hidden; 
+
+}
+
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Sweet alert custom styles */
+
+.custom-popup {
+    background-color: rgba(113, 1, 130, 0.1);
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgb(231, 151, 243);
+    z-index: 1;
+    box-shadow: 14px 14px 250px 90px rgba(255, 255, 255, 0.25);
+    padding: 30px;
+}
+
+.custom-title {
+    color: red;
+    font-family: 'Bruno Ace SC', sans-serif;
+}
+
+.custom-btn {
+    width: 230px;
+    height: 55px;
+    font-family: 'Bruno Ace', sans-serif;
+    background-color: rgba(113, 1, 130, 0.1);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgb(231, 151, 243);
+    z-index: 1;
+    box-shadow: 14px 14px 250px 90px rgba(255, 255, 255, 0.25);
+}
+
+
+.custom-progress-bar {
+    font-size: 3em;
+    background-color: rgb(231, 151, 243);
+}
+
+.custom-loader {
+    border-top-color: rgb(163, 77, 170);
+    border-bottom-color: rgb(231, 151, 243);
+}
+
+
+/* Reusable font classes */
+
+.font-brunoAce {
+  font-family: "Bruno Ace", sans-serif;
+}
+
+.font-brunoAceSC {
+  font-family: "Bruno Ace SC", sans-serif;
+}
+
+
+
+/* link tag */
+
+.linkTag {
+  display: inline-block;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: break-all; 
+    white-space: normal;
+    text-overflow: ellipsis; 
+    color: #e16162;
+    font-size: 22px;
+    padding-left: 10px;
+}
