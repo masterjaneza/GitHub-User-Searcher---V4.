@@ -16,7 +16,8 @@ If you are developing a production application, we recommend using TypeScript wi
 For Georgian Scroll Down:
 
 ## 🚀 GitHub User Searcher V4
-Welcome! This is GitHub User Searcher V3 — a fast, lightweight, and visually polished web app that lets you search GitHub users and display their profiles using a sleek, user-friendly UI.
+Welcome! This is GitHub User Searcher V4 — a fast, lightweight, and visually polished web app that lets you search GitHub users and display their profile
+s using a sleek, user-friendly UI.
 
 ✨ Features
 🔍 Real-time GitHub user search
