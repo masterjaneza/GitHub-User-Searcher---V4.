@@ -35,35 +35,49 @@ let MainCard = () => {
 
     const userName = input.value.trim().replace(/\s+/g, '');
 
-    
-    if (!userName) {
-      let timerInterval;
-      Swal.fire({
-        title: 'Error',
-        html: '<span style="font-family: Bruno Ace SC; color: #fec7d7;">Please Input User Name</span>',
-        icon: 'error',
-        timer: 3000,
-        timerProgressBar: true,
-        didOpen: () => {
-          Swal.showLoading();
-          const timer = Swal.getPopup().querySelector("b");
-          timerInterval = setInterval(() => {
-            if (timer) timer.textContent = `${Swal.getTimerLeft()}`;
-          }, 100);
-        },
-        willClose: () => {
-          clearInterval(timerInterval);
-        },
-        customClass: {
-          popup: 'custom-popup',
-          title: 'custom-title',
-          confirmButton: 'custom-btn',
-          timerProgressBar: 'custom-progress-bar',
-          loader: 'custom-loader'
-        }
+if (!userName) {
+  let timerInterval;
+  Swal.fire({
+    title: 'Error',
+    html: '<span style="font-family: Bruno Ace SC; color: #fec7d7;">Please Input User Name</span>',
+    icon: 'error',
+    timer: 2500,
+    timerProgressBar: true,
+    background: 'rgba(17, 24, 39, 0.9)',
+    backdrop: `
+      rgba(0,0,0,0.8)
+    `,
+    showConfirmButton: false,
+    didOpen: () => {
+      // Hide all background elements
+      document.querySelectorAll('body > *:not(.swal2-container)').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transition = 'opacity 0.3s ease';
       });
-      return;
+      
+      Swal.showLoading();
+      const timer = Swal.getPopup().querySelector("b");
+      timerInterval = setInterval(() => {
+        if (timer) timer.textContent = `${Swal.getTimerLeft()}`;
+      }, 100);
+    },
+    willClose: () => {
+      // Restore all background elements
+      document.querySelectorAll('body > *:not(.swal2-container)').forEach(el => {
+        el.style.opacity = '1';
+      });
+      clearInterval(timerInterval);
+    },
+    customClass: {
+      popup: 'custom-popup',
+      title: 'custom-title',
+      timerProgressBar: 'custom-progress-bar',
+      loader: 'custom-loader'
     }
+  });
+  return;
+}
+
 
     const api = `https://api.github.com/users/${userName}`;
 
@@ -88,11 +102,12 @@ let MainCard = () => {
   return (
     <main className="flex justify-center items-center relative transition-all">
       {/* Background Layer for blur */}
-      <div className="background-layer absolute w-full h-full bg-[linear-gradient(135deg,_#004643,_#195e59)] z-0"></div>
+      <div className="background-layer fixed top-0 left-0 w-full h-full bg-[linear-gradient(135deg,_#004643,_#195e59)] z-0"></div>
 
       {/* Main card */}
       <div className="glass-blur absolute w-[1100px] h-[700px] rounded-[20px] bg-[rgba(255,255,255,0.1)] backdrop-blur-[25px] border border-[rgba(255,_255,_255,_0.55)] shadow-[0px_4px_250px_90px_rgba(255,255,255,0.25)] z-1 flex justify-center items-center gap-[110px] flex-col max-[1025px]:w-[900px] max-[769px]:w-[700px] max-[426px]:w-[400px] max-[376px]:w-[360px] max-[321px]:w-[310px]">
-        <div className="parent flex gap-[30px] max-[426px]:flex-col">
+       
+       <div className="parent flex gap-[30px] max-[426px]:flex-col">
           <input
             ref={inputRef}
             className="user-name w-[300px] h-[50px] rounded-[40px] border-none shadow-[0_2px_3px_black] bg-[#FFFDFD] transition-all duration-[0.45s] cursor-pointer text-[1.1em] hover:w-[310px] focus:outline-none focus:shadow-[0_4px_25px_9px_rgba(255,255,255,0.25)] font-brunoAceSC placeholder:font-black placeholder:text-[1.1em] placeholder:pl-0 placeholder:tracking-[2px] !pl-[20px]  max-[321px]:w-[280px] "
@@ -137,7 +152,7 @@ let MainCard = () => {
         </div>
       </div>
 
-      <div className="div1 mt-[-230px] w-[150px] h-[150px] bg-[#00ffcc] z-0"></div>
+      {/* <div className="div1 mt-[-230px] w-[150px] h-[150px] bg-[#00ffcc] z-0"></div> */}
 
         <div id="app" className="w-screen h-screen fixed left-0 top-0 pointer-events-none">
           <div id="hero"></div>

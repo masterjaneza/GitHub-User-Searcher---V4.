@@ -7,7 +7,7 @@
   }
 
   /* Body Style */
-
+  
   body {
     min-height: 100vh;
     display: flex;
@@ -18,21 +18,21 @@
     background-color: #004643;
   }
   /* popup blur effect */
-
-  body.swal2-shown > *:not(.swal2-container) {
-    filter: blur(5px);
-    transition: 0.3s ease-in-out;
+body.swal2-shown > :not(.swal2-container):not(#app):not(.background-layer) {
+  /* filter: blur(5px); */
+  transition: 0.3s ease-in-out;
 }
 
-/* Ensure consistent scrollbar behavior */
+
+
 html {
-  overflow-y: scroll; /* Always show the scrollbar */
+    overflow-y: scroll; /* Always show the scrollbar */
 }
 
 body.swal2-shown {
-  overflow-y: hidden; 
-
+    overflow-y: hidden; /* Disable scrolling but keep the scrollbar */
 }
+
 
 
 
@@ -46,16 +46,16 @@ main {
 /* Sweet alert custom styles */
 
 .custom-popup {
-    background-color: rgba(113, 1, 130, 0.1);
-    border-radius: 30px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(25px);
-    -webkit-backdrop-filter: blur(25px);
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
-    border: 1px solid rgb(231, 151, 243);
-    z-index: 1;
-    box-shadow: 14px 14px 250px 90px rgba(255, 255, 255, 0.25);
-    padding: 30px;
+    background-color: rgba(113, 1, 130, 0.1) !important;
+    border-radius: 30px !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(25px) !important;
+    -webkit-backdrop-filter: blur(25px) !important;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2) !important;
+    border: 1px solid rgb(231, 151, 243) !important;
+    z-index: 1 !important;
+    box-shadow: 14px 14px 250px 90px rgba(255, 255, 255, 0.25) !important;
+    padding: 30px !important;
 }
 
 .custom-title {
