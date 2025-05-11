@@ -35,8 +35,8 @@ SweetAlert2 – beautiful modals and alert dialogs
 
 Georgian:
 
-🚀 GitHub User Searcher V3
-გამარჯობა! ეს არის GitHub User Searcher V3 — მსუბუქი, სწრაფი და ვიზუალურად დახვეწილი ვებსაპლიკაცია, რომელიც GitHub API-ის საშუალებით საშუალებას გაძლევს მოძებნო GitHub მომხმარებლები და იხილო მათი პროფილები ლამაზი UI-თი.
+🚀 GitHub User Searcher V4
+გამარჯობა! ეს არის GitHub User Searcher V4 — მსუბუქი, სწრაფი და ვიზუალურად დახვეწილი ვებსაპლიკაცია, რომელიც GitHub API-ის საშუალებით საშუალებას გაძლევს მოძებნო GitHub მომხმარებლები და იხილო მათი პროფილები ლამაზი UI-თი.
 
 ✨ ფუნქციონალი
 🔍 რეალურ დროში GitHub მომხმარებლის ძებნა
