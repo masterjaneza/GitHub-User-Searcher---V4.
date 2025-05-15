@@ -68,6 +68,17 @@ Georgian:
 დავით ჯანეზაშვილი როგორც MasterJaneza
 
 
+## 🧪 License
+
+Feel free to use, modify, or remix. No pressure. Just give credit where credit's due. 😉
+
+---
+
+
+## 🚀 Support the Vibes  
+Smash that ⭐ star and fork this beauty — let’s build cool things together.
+
+
 
 -----------
 
@@ -83,4 +94,3 @@ Currently, two official plugins are available:
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-
